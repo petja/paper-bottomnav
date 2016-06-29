@@ -1,0 +1,44 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="./bottomnav-item.html">
+
+<dom-module id="bottomnav-element">
+    <template>
+        <style>
+:host {
+    background: var(--paper-grey-900);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+bottomnav-item {
+    flex: 1;
+}
+        </style>
+        <bottomnav-item label="Item A" icon="lol"></bottomnav-item>
+        <bottomnav-item label="Item B" icon="lol"></bottomnav-item>
+        <bottomnav-item label="Item C" icon="lol"></bottomnav-item>
+        <bottomnav-item label="Item D" icon="lol"></bottomnav-item>
+        
+    </template>
+
+    <script>
+Polymer({
+
+    is: 'bottomnav-element',
+
+    properties: {
+        hideLabels: {
+            type: Boolean,
+            value: false,
+        },
+    },
+
+});
+console.log('yolo', this);
+    </script>
+</dom-module>
